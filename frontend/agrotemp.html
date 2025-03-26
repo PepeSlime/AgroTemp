@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroTemp</title>
+    <link rel="stylesheet" href="css/agrotemp.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <header class="container-header">
+        <nav class="container-nav">
+            <div class="logo">
+                <img src="img/agrotemp_logo.png" alt="">
+                <h4>AgroTemp</h4>
+            </div>
+            <div class="more">
+                <a href="" class="az">Início</a>
+                <a href="" class="az">Gerenciar Dispositivos</a>
+                <div class="add-gadget" id="add">
+                    <i class="fa-solid fa-circle-plus"></i>
+                    <p>Adicionar Dispositivo</p>
+                </div>
+                <div class="modal-add" id="modal">
+                    <div class="title-add">
+                        <h6>Adicionar Dispositivo</h6>
+                        <i class="fa-solid fa-xmark" id="close"></i>
+                    </div>
+                    <div class="form">
+                        <form action="">
+                            <input type="text" placeholder="Nome do Dispositivo">
+                            <input type="text" placeholder="Código">
+                        </form>
+                        <div class="btn">
+                            <button>Cadastrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </nav>
+    </header>
+    <section class="main">
+        <div class="main-gadget">
+            <div id="gadget">
+                <div id="title-card">
+                    <h4>Dispositivo 01</h4>
+                </div>
+                <img src="img/dispositivo_AgroTemp-removebg-preview.png" alt="">
+            </div>
+            <div class="card-gadget">
+                <div class="main-info">
+                    <div class="organize">
+                        <div class="info" id="info-temp">
+                            <i class="fa-solid fa-temperature-high"></i>
+                            <p>Temperatura</p>
+                        </div>
+                        <div class="data-content"></div>
+                        <div class="img-feedback">
+                            <img src="img/happy.png" alt="">
+                            <img src="img/sad.png" alt="">
+                        </div>
+                    </div>
+                    <div class="organize">
+                        <div class="info" id="info-humidity">
+                            <i class="fa-solid fa-droplet"></i>
+                            <p>Umidade</p>
+                        </div>
+                        <div id="box-humidity"></div>
+                        <div class="data-content"></div>
+                        <div class="img-feedback">
+                            <img src="img/happy.png" alt="">
+                            <img src="img/sad.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-gadget">
+            <div id="gadget">
+                <div id="title-card">
+                    <h4>Dispositivo 02</h4>
+                </div>
+                <img src="img/dispositivo_AgroTemp-removebg-preview.png" alt="">
+            </div>
+            <div class="card-gadget">
+                <div class="main-info">
+                    <div class="organize">
+                        <div class="info" id="info-temp">
+                            <i class="fa-solid fa-temperature-high"></i>
+                            <p>Temperatura</p>
+                        </div>
+                        <div class="data-content"></div>
+                        <div class="img-feedback">
+                            <img src="img/happy.png" alt="">
+                            <img src="img/sad.png" alt="">
+                        </div>
+                    </div>
+                    <div class="organize">
+                        <div class="info" id="info-humidity">
+                            <i class="fa-solid fa-droplet"></i>
+                            <p>Umidade</p>
+                        </div>
+                        <div id="box-humidity"></div>
+                        <div class="data-content"></div>
+                        <div class="img-feedback">
+                            <img src="img/happy.png" alt="">
+                            <img src="img/sad.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-gadget">
+            <div id="gadget">
+                <div id="title-card">
+                    <h4>Dispositivo 03</h4>
+                </div>
+                <img src="img/dispositivo_AgroTemp-removebg-preview.png" alt="">
+            </div>
+            <div class="card-gadget">
+                <div class="main-info">
+                    <div class="organize">
+                        <div class="info" id="info-temp">
+                            <i class="fa-solid fa-temperature-high"></i>
+                            <p>Temperatura</p>
+                        </div>
+                        <div class="data-content"></div>
+                        <div class="img-feedback">
+                            <img src="img/happy.png" alt="">
+                            <img src="img/sad.png" alt="">
+                        </div>
+                    </div>
+                    <div class="organize">
+                        <div class="info" id="info-humidity">
+                            <i class="fa-solid fa-droplet"></i>
+                            <p>Umidade</p>
+                        </div>
+                        <div id="box-humidity"></div>
+                        <div class="data-content"></div>
+                        <div class="img-feedback">
+                            <img src="img/happy.png" alt="">
+                            <img src="img/sad.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-gadget">
+            <div id="gadget">
+                <div id="title-card">
+                    <h4>Dispositivo 04</h4>
+                </div>
+                <img src="img/dispositivo_AgroTemp-removebg-preview.png" alt="">
+            </div>
+            <div class="card-gadget">
+                <div class="main-info">
+                    <div class="organize">
+                        <div class="info" id="info-temp">
+                            <i class="fa-solid fa-temperature-high"></i>
+                            <p>Temperatura</p>
+                        </div>
+                        <div class="data-content"></div>
+                        <div class="img-feedback">
+                            <img src="img/happy.png" alt="">
+                            <img src="img/sad.png" alt="">
+                        </div>
+                    </div>
+                    <div class="organize">
+                        <div class="info" id="info-humidity">
+                            <i class="fa-solid fa-droplet"></i>
+                            <p>Umidade</p>
+                        </div>
+                        <div id="box-humidity"></div>
+                        <div class="data-content"></div>
+                        <div class="img-feedback">
+                            <img src="img/happy.png" alt="">
+                            <img src="img/sad.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
