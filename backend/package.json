@@ -6,6 +6,7 @@
     "start": "node backend/index.js"
   },
   "dependencies": {
-    "express": "^4.21.2"
+    "express": "^4.21.2",
+    "mysql2": "^3.14.0"
   }
 }
