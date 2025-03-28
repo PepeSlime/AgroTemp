@@ -10,6 +10,11 @@
       {
         "src": "/(.*)",
         "dest": "index.js"
+      },
+
+      {
+        "src": "/img/(.*)",
+        "dest": "/frontend/img/$1"
       }
     ]
   }
