@@ -88,6 +88,11 @@ body{
     height: 40px;
 }
 
+.menu-hamburger{
+    display: none;
+    visibility: hidden;
+}
+
 .card-gadget i{
     margin: auto 0;
 }
@@ -273,4 +278,76 @@ body{
     width: 90px;
     background-color: #adadad;
     border-radius: 0 5px 5px 0;
+}
+
+@media (max-width: 680px) {
+   
+    .more a,
+    .add-gadget{
+        display: none;
+        visibility: hidden;
+    }
+
+    .menu-hamburger{
+        display: flex;
+        visibility: visible;
+    }
+
+    .menu-hamburger i{
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    .main{
+        display: flex;
+        justify-content: center;
+        gap: 80px;
+    }
+
+    .main-gadget{
+        margin: 5px;
+    }
+
+    .card-gadget{
+        height: 200px;
+        width: 240px;
+    }
+
+    #title-card{
+        height: 30px;
+        width: 90px;
+    }
+
+    #title-card h4{
+        font-size: 12px;
+    }
+
+    #gadget{
+        width: 100px;
+        height: 200px;
+    }
+
+    #gadget img{
+        width: 70px;
+        height: 140px;
+    }
+
+    #info-temp,
+    #info-humidity{
+        width: 60px;
+    }
+
+    .info i,
+    .info p {
+        font-size: 14px; 
+    }
+
+    .info p{
+        display: none;
+        visibility: hidden;
+    }
+
+    .data-content {
+        width: 60px;
+    }
 }
