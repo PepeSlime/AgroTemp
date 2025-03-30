@@ -280,6 +280,11 @@ body{
     border-radius: 0 5px 5px 0;
 }
 
+.add-device{
+    display: none;
+    visibility: hidden;
+}
+
 @media (max-width: 680px) {
     body {
         background-size: cover;
@@ -362,5 +367,35 @@ body{
     .img-feedback img{
         width: 20px;
         height: 20px;
+    }
+
+    .container-add{
+        display: flex;
+        justify-content: end;
+        align-items: end;
+        height: 80vh;
+        width: 100%;
+        position: absolute;
+    }
+
+    .add-device{
+        display: flex;
+        visibility: visible;
+        position: fixed;
+        z-index: 1;
+        margin-right: 5px;
+        background-color: #3f7519;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 2px 2px 30px rgba(62, 148, 5, 0.7);
+        cursor: pointer;
+    }
+
+    .add-device i {
+        color: #fff;
+        font-size: 19px;
     }
 }
