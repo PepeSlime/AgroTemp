@@ -1,25 +1,72 @@
-const db = require('../config/db');
+const supabase = require('../config/supabase');
 
 const Device = {
-  create: (mac_address, name, callback) => {
-    const query = 'INSERT INTO devices (mac_address, name) VALUES (?, ?)';
-    db.query(query, [mac_address, name], callback);
+  create: async (mac_address, name) => {
+    const { data: existingDevice, error: findError } = await supabase
+      .from('devices')
+      .select('*')
+      .eq('mac_address', mac_address)
+      .single();
+
+    if (findError && findError.code !== 'PGRST116') {
+      throw findError;
+    }
+
+    if (existingDevice) {
+      return { message: 'Dispositivo já cadastrado!' };
+    }
+
+    const { data, error } = await supabase
+      .from('devices')
+      .insert([{ mac_address, name }]);
+
+    if (error) throw error;
+    return data;
   },
-  getAll: callback => {
-    const query = 'SELECT * FROM devices';
-    db.query(query, callback);
+
+  getAll: async () => {
+    const { data, error } = await supabase.from('devices').select('*');
+    if (error) throw error;
+    return data;
   },
-  update: (id, name, callback) => {
-    const query = 'UPDATE devices SET name = ? WHERE id = ?';
-    db.query(query, [name, id], callback);
+
+  update: async (id, name) => {
+    const { data, error } = await supabase
+      .from('devices')
+      .update({ name })
+      .eq('id', id);
+
+    if (error) throw error;
+    return data;
   },
-  delete: (id, callback) => {
-    const query = 'DELETE FROM devices WHERE id = ?';
-    db.query(query, [id], callback);
+
+  delete: async (id) => {
+    const { data, error } = await supabase.from('devices').delete().eq('id', id);
+    if (error) throw error;
+    return data;
   },
-  saveData: (mac_address, temperature, humidity, callback) => {
-    const query = 'INSERT INTO device_data (mac_address, temperature, humidity) VALUES (?, ?, ?)';
-    db.query(query, [mac_address, temperature, humidity], callback);
+
+  saveData: async (mac_address, temperature, humidity) => {
+    const { data: existingDevice, error: findError } = await supabase
+      .from('devices')
+      .select('*')
+      .eq('mac_address', mac_address)
+      .single();
+
+    if (findError && findError.code !== 'PGRST116') {
+      throw findError;
+    }
+
+    if (!existingDevice) {
+      throw new Error('Dispositivo não cadastrado!');
+    }
+
+    const { data, error } = await supabase
+      .from('device_data')
+      .insert([{ mac_address, temperature, humidity }]);
+
+    if (error) throw error;
+    return data;
   }
 };
 
