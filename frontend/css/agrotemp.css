@@ -280,10 +280,6 @@ body{
     border-radius: 0 5px 5px 0;
 }
 
-.add-device{
-    display: none;
-    visibility: hidden;
-}
 
 @media (max-width: 680px) {
     body {
@@ -291,8 +287,7 @@ body{
         min-height: 100vh;
     }
    
-    .more a,
-    .add-gadget{
+    .more a{
         display: none;
         visibility: hidden;
     }
@@ -300,6 +295,7 @@ body{
     .menu-hamburger{
         display: flex;
         visibility: visible;
+        margin-left: 30px;
     }
 
     .menu-hamburger i{
@@ -307,11 +303,15 @@ body{
         cursor: pointer;
     }
 
+    .modal-add{
+        margin-left: 11px;
+    }
+
     .main{
         display: flex;
         justify-content: center;
         gap: 60px;
-        margin-top: 80px;
+        margin-top: 40px;
         padding-bottom: 100px;
     }
 
@@ -370,39 +370,5 @@ body{
         height: 20px;
     }
 
-    .container-add{
-        display: flex;
-        justify-content: end;
-        height: 90%;
-        width: 100%;
-        position: absolute;
-        margin-top: -65px;
-    }
-
-    .add-device{
-        display: flex;
-        visibility: visible;
-        position: fixed;
-        z-index: 1;
-        margin-right: 7px;
-        background-color: #3f7519;
-        border-radius: 50%;
-        width: 50px;
-        height: 50px;
-        align-items: center;
-        justify-content: center;
-        box-shadow: 2px 2px 35px rgba(33, 58, 17, 0.7);
-        cursor: pointer;
-        transition: .4s ease;
-    }
-
-    .add-device:hover{
-        transform: scale(1.1);
-    }
-
-    .add-device i {
-        color: #fff;
-        font-size: 19px;
-    }
 
 }
