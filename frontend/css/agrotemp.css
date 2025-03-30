@@ -303,6 +303,11 @@ body{
         cursor: pointer;
     }
 
+    .add-gadget p,
+    .add-gadget i{
+        font-size: 12px;
+    }
+
     .modal-add{
         margin-left: 11px;
     }
