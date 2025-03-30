@@ -281,6 +281,10 @@ body{
 }
 
 @media (max-width: 680px) {
+    body {
+        background-size: cover;
+        min-height: 100vh;
+    }
    
     .more a,
     .add-gadget{
@@ -301,7 +305,8 @@ body{
     .main{
         display: flex;
         justify-content: center;
-        gap: 80px;
+        gap: 60px;
+        margin-top: 45px;
     }
 
     .main-gadget{
@@ -309,13 +314,14 @@ body{
     }
 
     .card-gadget{
-        height: 200px;
+        height: 160px;
         width: 240px;
     }
 
     #title-card{
         height: 30px;
         width: 90px;
+        margin-top: -20px;
     }
 
     #title-card h4{
@@ -324,17 +330,19 @@ body{
 
     #gadget{
         width: 100px;
-        height: 200px;
+        height: 160px;
     }
 
     #gadget img{
         width: 70px;
         height: 140px;
+        margin-top: -8px;
     }
 
     #info-temp,
     #info-humidity{
         width: 60px;
+        padding: 7px 0;
     }
 
     .info i,
@@ -349,5 +357,10 @@ body{
 
     .data-content {
         width: 60px;
+    }
+
+    .img-feedback img{
+        width: 20px;
+        height: 20px;
     }
 }
