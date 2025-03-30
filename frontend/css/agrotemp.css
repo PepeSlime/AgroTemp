@@ -295,7 +295,7 @@ body{
     .menu-hamburger{
         display: flex;
         visibility: visible;
-        margin-left: 30px;
+        margin-left: 20px;
     }
 
     .menu-hamburger i{
@@ -305,7 +305,11 @@ body{
 
     .add-gadget p,
     .add-gadget i{
-        font-size: 12px;
+        font-size: 10px;
+    }
+
+    .add-gadget{
+        height: 30px;
     }
 
     .modal-add{
