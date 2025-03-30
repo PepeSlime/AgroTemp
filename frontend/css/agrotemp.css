@@ -312,6 +312,7 @@ body{
         justify-content: center;
         gap: 60px;
         margin-top: 45px;
+        padding-bottom: 100px;
     }
 
     .main-gadget{
@@ -372,10 +373,10 @@ body{
     .container-add{
         display: flex;
         justify-content: end;
-        align-items: end;
-        height: 80vh;
+        height: 90%;
         width: 100%;
         position: absolute;
+        margin-top: -30px;
     }
 
     .add-device{
@@ -390,8 +391,13 @@ body{
         height: 60px;
         align-items: center;
         justify-content: center;
-        box-shadow: 2px 2px 30px rgba(62, 148, 5, 0.7);
+        box-shadow: 2px 2px 35px rgba(62, 148, 5, 0.7);
         cursor: pointer;
+        transition: .4s ease;
+    }
+
+    .add-device:hover{
+        transform: scale(1.1);
     }
 
     .add-device i {
