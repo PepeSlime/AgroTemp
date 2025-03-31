@@ -45,9 +45,20 @@ router.delete('/:id', async (req, res) => {
 router.post('/data', async (req, res) => {
   try {
     const { mac_address, temperature, humidity } = req.body;
-    const result = await Device.saveData(mac_address, temperature, humidity);
-    res.json(result);
+
+    console.log("Recebendo dados:", req.body); // Depuração
+
+    if (!mac_address || temperature === undefined) {
+      return res.status(400).json({ error: "mac_address e temperature são obrigatórios" });
+    }
+
+    // Se a umidade não for enviada, defina como null ou um valor padrão
+    const humidityValue = humidity !== undefined ? humidity : null;
+
+    const result = await Device.saveData(mac_address, temperature, humidityValue);
+    res.status(201).json({ message: "Dados salvos com sucesso!", data: result });
   } catch (error) {
+    console.error("Erro ao salvar os dados:", error);
     res.status(500).json({ error: error.message });
   }
 });
