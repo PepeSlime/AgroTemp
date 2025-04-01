@@ -280,6 +280,7 @@ body{
     border-radius: 0 5px 5px 0;
 }
 
+/* Responsividade - celular */
 
 @media (max-width: 680px) {
     body {
@@ -374,6 +375,10 @@ body{
     .img-feedback img{
         width: 20px;
         height: 20px;
+    }
+
+    .form input{
+        width: 80%;
     }
 
 
